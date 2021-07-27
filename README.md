@@ -6,7 +6,7 @@ This is a guide for setting up a new arch linux machine (specifically, a chromeb
 
 *https://wiki.archlinux.org/title/Chrome_OS_devices/Crostini*
 
-**Delete all existing containers*
+**Delete all existing containers**
 
 ```
 vmc destroy termina
