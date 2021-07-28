@@ -18,6 +18,7 @@ vmc start termina
 ```
 vmc container termina arch https://us.images.linuxcontainers.org archlinux/current
 ```
+*above reads: using VMC, add container to termina VM called "arch" and download "archlinux/current" image from linuxcontainers.org*
 
 *The following error will be shown after completion:*
 ```
