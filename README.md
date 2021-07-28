@@ -21,7 +21,8 @@ vmc container termina arch https://us.images.linuxcontainers.org archlinux/curre
 
 *The following error will be shown after completion:*
 ```
-"Error: routine at frontends/vmc.rs:403 `container_setup_user(vm_name,user_id_hash,container_name,username)` failed: timeout while waiting for signal"
+"Error: routine at frontends/vmc.rs:403 `container_setup_user(vm_name,user_id_hash,container_name,username)`
+failed: timeout while waiting for signal"
 ```
 
 ```
