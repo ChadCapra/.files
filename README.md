@@ -13,6 +13,11 @@ vmc destroy termina
 vmc start termina
 ```
 
+*exit VM shell (back to crosh)*
+```
+exit
+```
+
 **Create arch container**
 
 ```
@@ -35,5 +40,16 @@ lxc list
 
 ```
 lxc exec arch -- bash
+```
+
+**Set up user**
+
+*If you don't know username*
+```
+grep 1000:1000 /etc/passwd|cut -d':' -f1
+```
+
+```
+passwd *username*
 ```
 
