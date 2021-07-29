@@ -1,4 +1,4 @@
-# New machine setup
+# Setup Arch on Chromebook
 
 This is a guide for setting up a new arch linux machine (specifically, a chromebook/crostini setup).  If you run into any issues, please refer to the following guide:
 
@@ -223,4 +223,11 @@ If you add a bunch of stuff you can later do another backup based again on what 
 *chromeos-arch-development-2021-07-28.tini*
 
 
+# Install Desired Software
 
+Now, that you have a fully functional arch system running on your chromebook (or if you have arch setup on a different machine), you can use the following script to complete your setup with the necessary tools.
+
+`sh <(curl -L https://raw.githubusercontent.com/ChadCapra/.files/main/bin/setup.sh)`
+
+The script above will install the base software needed for elixir development (e.g. base-devel, yay, git, neovim, elixir, etc)
+*Many of the items have been installed already, but this allows us to re-use the same script on a brand new arch box (non-crostini)
