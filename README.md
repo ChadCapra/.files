@@ -30,7 +30,7 @@ Error: operation `container_start` failed: timeout while waiting for signal
 [ERROR:src/main.rs:181] ERROR: command failed
 ```
 
-**Confirm lxc container (called "arch") is running**
+**Confirm lxc "arch" container is running**
 
 Connect into termina (and list containers)
 ```
@@ -84,7 +84,7 @@ Now, let's exit
 exit
 ```
 
-**Set up git, yay and verify everything is working!**
+**Set up git, yay and verify**
 
 But this time, let's use the user we just configured to have access to everything!
 ```
@@ -125,7 +125,7 @@ Run yay to confirm it is working (same as yay -Syu, which does system/pacman pkg
 yay
 ```
 
-## Next setup for Crostini support (app launcher/displays)
+## Next setup Crostini support (i.e. app launcher/displays)
 
 Assuming, you installed `yay` we can use that for setting up Crostini Tools
 
@@ -164,7 +164,7 @@ exit
 ```
 
 
-## Rename Container and Restart (everything)
+## Rename Container and Restart
 
 The lxc container that you wish to integrate with Crostini (i.e. ChromeOS) must be named "penguin"
 
