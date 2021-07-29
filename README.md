@@ -4,6 +4,7 @@ This is a guide for setting up a new arch linux machine (specifically, a chromeb
 
 *https://wiki.archlinux.org/title/Chrome_OS_devices/Crostini*
 
+
 ##  Create lxc arch container
 
 **Setup VM and base lxc arch container**
@@ -23,8 +24,6 @@ Create arch container (by using image from linuxcontainers.org)
 ```
 vmc container termina arch https://us.images.linuxcontainers.org archlinux/current
 ```
-*above reads: using VMC, add container to termina VM called "arch" and download "archlinux/current" image from linuxcontainers.org*
-
 *The following error will be shown after completion:*
 ```
 Error: operation `container_start` failed: timeout while waiting for signal
@@ -84,7 +83,6 @@ Now, let's exit
 ```
 exit
 ```
-
 
 **Set up git, yay and verify everything is working!**
 
@@ -165,6 +163,7 @@ exit
 [Ctrl+a q]
 ```
 
+
 ## Rename Container and Restart (everything)
 
 The lxc container that you wish to integrate with Crostini (i.e. ChromeOS) must be named "penguin"
@@ -200,4 +199,28 @@ At this point, we could probably just start the termina VM `vmc start termina` b
 2. POWER ON CHROMEBOOK
 3. CLICK ON TERMINAL (in launcher)
 ```
+
+After launching terminal, you should see "start VM", "starting container", etc...
+Once started...
+```
+yay
+```
+*This updates everything for your linux subsystem*
+
+```
+exit
+```
+
+
+## Create Backup for Linux VM + lxc containers (so you don't need to do these steps again :))
+
+`ChromeOS -> Settings -> Developers -> Linux -> Backup & Restore -> Backup`
+
+Helpful hint: Name backup based on what is inside (e.g. arch-base)
+*Sample Name: chromeos-arch-base-2021-07-28.tini*
+
+If you add a bunch of stuff you can later do another backup based again on what it is used for:
+*chromeos-arch-development-2021-07-28.tini*
+
+
 
