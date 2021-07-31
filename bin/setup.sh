@@ -6,7 +6,7 @@ cd $HOME
 # Update system
 sudo pacman -Syu --noconfirm
 
-PKGS=git base-devel fish neovim docker elixir
+PKGS="git base-devel fish neovim docker elixir"
 
 echo ""
 echo "#########################################################################"
