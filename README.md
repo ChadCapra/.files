@@ -47,15 +47,16 @@ lxc exec arch -- bash
 
 **Update system**
 ```
-pacman -Syu
+pacman -Syu --noconfirm
 ```
 
 Install base-devel (which includes "sudo" and "makepkg")
 ```
-pacman -S base-devel
+pacman -S --noconfirm base-devel
 ```
 
 **Allow sudo for all users**
+
 ```
 visudo
 ```
@@ -63,44 +64,104 @@ visudo
 ```
 # %wheel ALL=(ALL) ALL
 ```
+let's figure out your current *username*
+```
+grep 1000:1000 /etc/passwd|cut -d':' -f1
+```
+*all subsequent references to *username* refer to username returned from above*
+
 ... then add user to the wheel group
 ```
 usermod -aG wheel *username*
 ```
 
 **Change password**
-*If you don't know username*
-```
-grep 1000:1000 /etc/passwd|cut -d':' -f1
-```
 
-Change password for *user* (so in future, we login as user and not root)
+And next, change password for *user* (so in future, we login as user and not root)
 ```
 passwd *username*
 ```
 
-Now, let's exit
+**Set up locale**
+
+Arch's default language is C (from the image chosen above), so let's fix that
+*using guidance from https://wiki.archlinux.org/title/locale*
+
+First,confirm what language is set
+```
+locale -a
+```
+
+Return might look like:
+```
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_COLLATE to default locale: No such file or directory
+C
+POSIX
+```
+*Ignore any warnings or labels, they will be fixed shortly*
+
+If the language you desire is not listed (e.g. en_US.UTF-8), then uncomment the following the line from `/etc/locale.gen` using `vi /etc/locale.gen`:
+```
+...
+#en_SG ISO-8859-1
+en_US.UTF-8 UTF-8
+#en_US ISO-8859-1
+...
+```
+Save the file and generate locale
+```
+locale-gen
+```
+Now, we must write the `LANG` env variable to `/etc/locale.conf` (using `vi`)
+```
+LANG=en_US.UTF-8
+```
+or just use the following command which adds it automatically
+```
+localectl set-locale LANG=en_US.UTF-8
+```
+
+Now, let's exit, and log back in using the newly configured user (who now has sudo access)
 ```
 exit
-```
-
-**Set up locale, git and yay **
-
-But this time, let's use the user we just configured to have access to everything!
-```
 lxc console arch
 ```
 *You must hit enter to get a prompt to login (use username and password chosen above)*
 
-Verify networking is all set:
+Verify language
+```
+locale
+```
+which should return
+```
+LANG=en_US.UTF-8
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=
+```
+
+Verify networking is all set and you now have a working arch machine!!
 ```
 ip -4 a show dev eth0
 ```
 *if you don't see IP address(es), then something went wrong, refer to guide at beginning*
 
-Setup git (needed for downloading Crostini container tools)
+**Set up git and yay**
+Set up git (needed for downloading Crostini container tools)
 ```
-sudo pacman -S git
+sudo pacman -Sy git
 ```
 
 Install yay (to allow for quick installs of AUR packages)
@@ -127,7 +188,7 @@ yay
 
 ## Next setup Crostini support (i.e. app launcher/displays)
 
-Assuming, you installed `yay` we can use that for setting up Crostini Tools
+Assuming, you installed `yay` (from above steps) we can use that for setting up Crostini Tools
 
 ```
 yay cros-container-guest-tools-git
@@ -142,8 +203,8 @@ N
 
 Install Wayland and XOrg-Wayland (using pacman, but yay could probably be used too)
 ```
-sudo pacman -S wayland
-sudo pacman -S xorg-xwayland 
+sudo pacman -S --noconfirm wayland
+sudo pacman -S --noconfirm xorg-xwayland 
 ```
 
 Now, we need to start/enable the following services
