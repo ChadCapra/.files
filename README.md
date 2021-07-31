@@ -84,7 +84,7 @@ Now, let's exit
 exit
 ```
 
-**Set up git, yay and verify**
+**Set up locale, git and yay **
 
 But this time, let's use the user we just configured to have access to everything!
 ```
