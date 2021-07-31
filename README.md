@@ -114,14 +114,11 @@ Save the file and generate locale
 ```
 locale-gen
 ```
-Now, we must write the `LANG` env variable to `/etc/locale.conf` (using `vi`)
-```
-LANG=en_US.UTF-8
-```
-or just use the following command which adds it automatically
+Now, run the following
 ```
 localectl set-locale LANG=en_US.UTF-8
 ```
+*this writes `LANG=en_US.UTF-8` env variable to `/etc/locale.conf`*
 
 Now, let's exit, and log back in using the newly configured user (who now has sudo access)
 ```
