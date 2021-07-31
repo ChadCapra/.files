@@ -275,10 +275,10 @@ exit
 `ChromeOS -> Settings -> Developers -> Linux -> Backup & Restore -> Backup`
 
 Helpful hint: Name backup based on what is inside (e.g. arch-base)
-*Sample Name: chromeos-arch-base-2021-07-28.tini*
+*Sample Name: arch-base-2021-07-31.tini*
 
 If you add a bunch of stuff you can later do another backup based again on what it is used for:
-*chromeos-arch-development-2021-07-28.tini*
+*arch-development-2021-08-01.tini*
 
 
 # Install Desired Software
