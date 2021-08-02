@@ -102,8 +102,11 @@ git config --global user.email "$EMAIL"
 rm -rf $DOTFILES_DIR
 git clone $DOTFILES_REPO $DOTFILES_DIR
 
+# Set current directory to $DOTFILES_DI
+cd $DOTFILES_DIR
+
 # Set up symlinks
-source $DOTFILES_DIR/autosymlink.sh
+source ./autosymlink.sh
 
 
 echo ""
