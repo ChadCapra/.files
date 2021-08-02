@@ -103,7 +103,7 @@ rm -rf $DOTFILES_DIR
 git clone $DOTFILES_REPO $DOTFILES_DIR
 
 # Set up symlinks
-source autosymlink.sh
+source ./autosymlink.sh
 
 
 echo ""
