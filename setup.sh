@@ -106,7 +106,7 @@ git clone $DOTFILES_REPO $DOTFILES_DIR
 cd $DOTFILES_DIR
 
 # Set up symlinks
-source ./autosymlink.sh
+source ./linkdots.sh
 
 
 echo ""
