@@ -113,6 +113,7 @@ echo "#########################################################################"
 echo ""
 
 # change default shell using sudo but for current user)
+echo $(which fish) | sudo tee -a /etc/shells
 sudo chsh -s $(which fish) $USER
 
 echo ""
