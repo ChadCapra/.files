@@ -1,0 +1,2 @@
+-- Sensible defaults
+require('settings')
