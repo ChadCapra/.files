@@ -196,7 +196,7 @@ Assuming, you installed `yay` (from above steps) we can use that for setting up 
 ```
 yay cros-container-guest-tools-git
 1
-1
+2
 N
 ```
 *If asked which packages to install, enter 1*
