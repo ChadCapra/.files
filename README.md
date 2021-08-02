@@ -120,6 +120,12 @@ localectl set-locale LANG=en_US.UTF-8
 ```
 *this writes `LANG=en_US.UTF-8` env variable to `/etc/locale.conf`*
 
+Let's apply the language right away (it would work if we shut down VM and start again)
+```
+unset LANG
+source /etc/profile.d/locale.sh
+```
+
 Now, let's exit, and log back in using the newly configured user (who now has sudo access)
 ```
 exit
@@ -194,7 +200,7 @@ yay cros-container-guest-tools-git
 N
 ```
 *If asked which packages to install, enter 1*
-*When asked 1) gvim or 2) vim, enter 1*
+*When asked 1) gvim or 2) vim, enter 2 (we prefer terminal :))*
 *No need to view differences (when asked)*
 *Lastly, this will also install dependencies to simplify your life!*
 
