@@ -195,13 +195,13 @@ Assuming, you installed `yay` (from above steps) we can use that for setting up 
 
 ```
 yay cros-container-guest-tools-git
-1
-2
-N
 ```
 *If asked which packages to install, enter 1*
+
 *When asked 1) gvim or 2) vim, enter 2 (we prefer terminal :))*
-*No need to view differences (when asked)*
+
+*No need to view differences (when asked, enter N)*
+
 *Lastly, this will also install dependencies to simplify your life!*
 
 Install Wayland and XOrg-Wayland (using pacman, but yay could probably be used too)
