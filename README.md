@@ -35,6 +35,8 @@ Error: operation `container_start` failed: timeout while waiting for signal
 Connect into termina (and list containers)
 ```
 vsh termina
+```
+```
 lxc list
 ```
 
