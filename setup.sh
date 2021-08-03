@@ -3,8 +3,8 @@
 NAME="Chad Capra"
 EMAIL="chadcapra@gmail.com"
 
-DOTFILES_REPO="git@github.com:ChadCapra/.files.git"
-DOTFILES_DIR=$HOME/.files
+DOTFILES_REPO="git@github.com:ChadCapra/dotfiles.git"
+DOTFILES_DIR=$HOME/dotfiles
 
 SSH_KEY_TYPE="ed25519" 
 SSH_KEY_PARAMS="-o -a 256" 
