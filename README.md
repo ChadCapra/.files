@@ -151,6 +151,8 @@ LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL=
 ```
 
+**Run container as user / verify network**
+
 Now, let's exit, and log back in using the newly configured user (who now has sudo access)
 ```
 exit
