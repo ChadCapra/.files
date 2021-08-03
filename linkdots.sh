@@ -1,11 +1,9 @@
 #!/bin/bash
 
-DOTFILEDIR="$(pwd -P)/dotfiles"
-BACKUPDIR=$HOME/.dotfiles.bak/"$(date +"%Y%m%d_%H%M%S")"
+DOTFILEDIR="$HOME/dotfiles/home"
+BACKUPDIR=$HOME/dotfiles.bak/"$(date +"%Y%m%d_%H%M%S")"
 
 mkdir -p $BACKUPDIR
-
-cd $DOTFILEDIR 
 
 backup_existing() {
   existing_path=$HOME/$1
@@ -24,6 +22,9 @@ symlink_dotfile() {
   mkdir -p "${link_path%/*}"
   ln -s $git_path $link_path
 }
+
+# iterate through each dotfile and symlink from relative location
+cd $DOTFILEDIR
 
 find . -type f -print0 | while read -d $'\0' file; do
   relfile=$(echo $file | cut -c 3-)
