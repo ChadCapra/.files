@@ -207,6 +207,8 @@ yay cros-container-guest-tools-git
 Install Wayland and XOrg-Wayland (using pacman, but yay could probably be used too)
 ```
 sudo pacman -S --noconfirm wayland
+```
+```
 sudo pacman -S --noconfirm xorg-xwayland 
 ```
 
