@@ -169,7 +169,7 @@ ip -4 a show dev eth0
 **Set up git and yay**
 Set up git (needed for downloading Crostini container tools)
 ```
-sudo pacman -Sy git
+sudo pacman -Sy git --noconfirm
 ```
 
 Install yay (to allow for quick installs of AUR packages)
