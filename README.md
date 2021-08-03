@@ -293,7 +293,7 @@ If you add a bunch of stuff you can later do another backup based again on what 
 
 Now, that you have a fully functional arch system running on your chromebook (or if you have arch setup on a different machine), you can use the following script to complete your setup with the necessary tools.
 
-`sh <(curl -L https://raw.githubusercontent.com/ChadCapra/.files/main/setup.sh)`
+`sh <(curl -L https://raw.githubusercontent.com/ChadCapra/dotfiles/main/setup.sh)`
 
 The script above will install the base software needed for elixir development (e.g. base-devel, yay, git, neovim, elixir, etc)
 *Many of the items have been installed already, but this allows us to re-use the same script on a brand new arch box (non-crostini)
