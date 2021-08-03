@@ -63,7 +63,8 @@ pacman -S --noconfirm base-devel
 visudo
 ```
 ... by allowing "wheel" group to run all cmds (via sudo)
-```## Uncomment to allow members of group wheel to execute any command
+```
+## Uncomment to allow members of group wheel to execute any command
 %wheel ALL=(ALL) ALL
 ```
 let's figure out your current *username*
