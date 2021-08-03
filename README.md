@@ -129,7 +129,7 @@ unset LANG
 source /etc/profile.d/locale.sh
 ```
 
-Verify language
+Verify locale/language
 ```
 locale
 ```
