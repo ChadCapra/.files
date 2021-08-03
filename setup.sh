@@ -103,7 +103,7 @@ rm -rf $DOTFILES_DIR
 git clone $DOTFILES_REPO $DOTFILES_DIR
 
 # Run auto symlink setup
-source ./linkdots.sh
+source $DOTFILES_DIR/linkdots.sh
 
 
 echo ""
