@@ -228,6 +228,18 @@ We can verify at least 1 service
 systemctl --user status sommelier@1
 ```
 
+You should see output similiar to the following:
+```
+* sommelier@1.service - Parent sommelier listening on socket wayland-1
+     Loaded: loaded (/usr/lib/systemd/user/sommelier@.service; enabled; vendor preset: enabled)
+    Drop-In: /usr/lib/systemd/user/sommelier@1.service.d
+             `-cros-sommelier-low-density-override.conf
+             /usr/lib/systemd/user/sommelier@.service.d
+             `-cros-sommelier-override.conf
+     Active: active (running) since Tue 2021-08-03 15:45:50 UTC; 6s ago
+```
+
+
 Then exit, and detach
 ```
 exit
