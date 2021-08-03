@@ -90,7 +90,7 @@ read continue
 
 echo ""
 echo "#########################################################################"
-echo "### setting up git and dotfiles                                       ###"
+echo "### Set up git and dotfiles                                       ###"
 echo "#########################################################################"
 echo ""
 
@@ -102,8 +102,7 @@ git config --global user.email "$EMAIL"
 rm -rf $DOTFILES_DIR
 git clone $DOTFILES_REPO $DOTFILES_DIR
 
-# Set current directory to $DOTFILES_DIR and run auto symlink setup
-cd $DOTFILES_DIR
+# Run auto symlink setup
 source ./linkdots.sh
 
 
