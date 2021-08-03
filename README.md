@@ -105,7 +105,11 @@ POSIX
 ```
 *Ignore any warnings or labels, they will be fixed shortly*
 
-If the language you desire is not listed (e.g. en_US.UTF-8), then uncomment the following the line from `/etc/locale.gen` using `vi /etc/locale.gen`:
+If the language you desire is not listed (e.g. en_US.UTF-8), then edit `/etc/locale.gen`
+```
+vi /etc/locale.gen`:
+```
+and uncomment the following the line
 ```
 ...
 #en_SG ISO-8859-1
@@ -113,7 +117,8 @@ en_US.UTF-8 UTF-8
 #en_US ISO-8859-1
 ...
 ```
-Save the file and generate locale
+
+Save the file `:wq` and generate locale
 ```
 locale-gen
 ```
