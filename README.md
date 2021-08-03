@@ -129,13 +129,6 @@ unset LANG
 source /etc/profile.d/locale.sh
 ```
 
-Now, let's exit, and log back in using the newly configured user (who now has sudo access)
-```
-exit
-lxc console arch
-```
-*You must hit enter to get a prompt to login (use username and password chosen above)*
-
 Verify language
 ```
 locale
@@ -157,6 +150,13 @@ LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL=
 ```
+
+Now, let's exit, and log back in using the newly configured user (who now has sudo access)
+```
+exit
+lxc console arch
+```
+*You must hit enter to get a prompt to login (use username and password chosen above)*
 
 Verify networking is all set and you now have a working arch machine!!
 ```
