@@ -19,6 +19,7 @@ sudo pacman -Syu --noconfirm
 
 PKGS1="git base-devel fish starship tree tldr"
 PKGS2="neovim fzf ripgrep docker nodejs npm elixir"
+YPKGS="nvim-packer-git"
 
 echo ""
 echo "#########################################################################"
@@ -50,6 +51,13 @@ echo ""
 
 yay
 
+echo ""
+echo "#########################################################################"
+echo "### Installing (via yay) $YPKGS            ###"
+echo "#########################################################################"
+echo ""
+
+yay -S $YPKGS
 
 # Create ssh key (if non-exists)...
 echo ""
