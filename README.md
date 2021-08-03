@@ -207,7 +207,7 @@ yay cros-container-guest-tools-git
 
 *No need to view differences (when asked, enter N)*
 
-*Lastly, this will also install dependencies to simplify your life!*
+*As you probably figured out by now, enter Y (for each time you are asked to proceed with install)*
 
 Install Wayland and XOrg-Wayland (using pacman, but yay could probably be used too)
 ```
