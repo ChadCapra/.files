@@ -131,6 +131,8 @@ localectl set-locale LANG=en_US.UTF-8
 Let's apply the language right away (it should also work to shut down VM and start it again)
 ```
 unset LANG
+```
+```
 source /etc/profile.d/locale.sh
 ```
 
