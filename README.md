@@ -323,3 +323,22 @@ sh <(curl -L https://raw.githubusercontent.com/ChadCapra/dotfiles/main/setup.sh)
 
 The script above will install the base software needed for elixir development (e.g. base-devel, yay, git, neovim, elixir, etc)
 *Many of the items have been installed already, but this allows us to re-use the same script on a brand new arch box (non-crostini)
+
+**Additional Steps after setup.sh**
+
+After running `setup.sh` which calls `linkdots.sh`, all your dotfiles will be linked to the correct paths.  However, please note, that if you add/rename/delete a dotfile, you will need to run `./linkdots.sh` script again so that dotfiles managed via git are linked correctly again.
+
+Also, after starting `nvim` for the first time, you will likely encounter an error and that is because, although packer was installed via init.lua, the rest of your packages (via packer) are not installed.
+
+To complete neovim setup:
+```
+nvim
+:PackerCompile
+:PackerInstall
+```
+
+You can then in the future run
+```
+:PackerSync
+```
+*This will clean up unused packages, and install new ones*
