@@ -19,7 +19,7 @@ sudo pacman -Syu --noconfirm
 
 PKGS1="git base-devel fish starship tree tldr"
 PKGS2="neovim fzf ripgrep docker nodejs npm elixir"
-YPKGS="nvim-packer-git"
+YPKGS="nerd-fonts-complete"
 
 echo ""
 echo "#########################################################################"
