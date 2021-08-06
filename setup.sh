@@ -10,16 +10,15 @@ SSH_KEY_TYPE="ed25519"
 SSH_KEY_PARAMS="-o -a 256" 
 SSH_KEY_PATH="$HOME/.ssh/id_$SSH_KEY_TYPE"
 
+PKGS1="git base-devel fish starship tree tldr"
+PKGS2="neovim fzf ripgrep docker nodejs npm elixir"
+YPKGS="nerd-fonts-complete"
 
 # Set current directory to home
 cd $HOME
 
 # Update system
 sudo pacman -Syu --noconfirm
-
-PKGS1="git base-devel fish starship tree tldr"
-PKGS2="neovim fzf ripgrep docker nodejs npm elixir"
-YPKGS="nerd-fonts-complete"
 
 echo ""
 echo "#########################################################################"
