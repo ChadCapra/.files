@@ -332,7 +332,7 @@ Also, after starting `nvim` for the first time, you will likely encounter an err
 
 To complete neovim setup:
 ```
-nvim
+nvim .
 :PackerCompile
 :PackerInstall
 ```
@@ -342,3 +342,21 @@ You can then in the future run
 :PackerSync
 ```
 *This will clean up unused packages, and install new ones*
+
+```
+:q
+```
+
+Lastly, you will need to install language servers for languages desired (e.g. lua, typescript, elixir)
+```
+nvim .
+:LspInstall lua
+:LspInstall typescript
+:LspInstall elixir
+```
+
+Quit and restart nvim
+```
+:q
+nvim .
+```
