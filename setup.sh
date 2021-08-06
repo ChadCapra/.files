@@ -12,7 +12,7 @@ SSH_KEY_PATH="$HOME/.ssh/id_$SSH_KEY_TYPE"
 
 PKGS1="git base-devel fish starship tree tldr"
 PKGS2="neovim fzf ripgrep docker nodejs npm elixir"
-YPKGS="nerd-fonts-complete"
+YPKGS="elixir-ls"
 
 # Set current directory to home
 cd $HOME
