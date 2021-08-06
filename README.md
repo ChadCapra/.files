@@ -107,7 +107,7 @@ POSIX
 
 If the language you desire is not listed (e.g. en_US.UTF-8), then edit `/etc/locale.gen`
 ```
-vi /etc/locale.gen`:
+vi /etc/locale.gen
 ```
 and uncomment the following the line
 ```
