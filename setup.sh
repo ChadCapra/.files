@@ -11,7 +11,7 @@ SSH_KEY_PARAMS="-o -a 256"
 SSH_KEY_PATH="$HOME/.ssh/id_$SSH_KEY_TYPE"
 
 PKGS1="git base-devel fish starship tree tldr unzip"
-PKGS2="neovim fzf ripgrep docker nodejs npm elixir"
+PKGS2="neovim fzf ripgrep docker nodejs npm elixir fd"
 YPKGS="z.lua docker-compose"
 
 # Set current directory to home
