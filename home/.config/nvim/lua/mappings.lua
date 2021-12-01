@@ -14,3 +14,4 @@ map('n', '<leader>w', ':w<cr>', options)
 map('n', '<leader>q', ':q<cr>', options)
 map('n', '<leader>e', ':e %:h<cr>', options)
 map('n', '<leader>v', ':vs %:h<cr>', options)
+

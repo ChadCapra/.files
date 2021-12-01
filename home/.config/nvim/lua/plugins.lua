@@ -18,16 +18,27 @@ return require('packer').startup(function(use)
     run = ':TSUpdate'
   }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use 'nvim-treesitter/playground'
+  -- use 'nvim-treesitter/playground'
+
+  use {'elixir-editors/vim-elixir'}
 
   use 'neovim/nvim-lspconfig'
-  use 'kabouzeid/nvim-lspinstall'
+  use 'williamboman/nvim-lsp-installer'
 
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/plenary.nvim'}}
   }
 
-  use {'morhetz/gruvbox'}
+  use {'numToStr/Comment.nvim'}
+  use {'tpope/vim-surround'}
+  use {'karb94/neoscroll.nvim'}
+
+  use {
+    'phaazon/hop.nvim', 
+    branch = 'v1'
+  }
+
+  use {'bluz71/vim-moonfly-colors'}
 
 end)

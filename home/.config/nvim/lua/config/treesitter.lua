@@ -1,12 +1,11 @@
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
-    "elixir",
+    -- "elixir",
     "typescript",
     "lua",
   },
   highlight = {
     enable = true,
-    disable = {},
   },
   index = {
     enable = false,

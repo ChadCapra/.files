@@ -5,6 +5,7 @@ opt.hidden = true                   -- Enable background buffers
 opt.ignorecase = true               -- Ignore case
 opt.joinspaces = false              -- No double spaces with join
 opt.list = true                     -- Show some invisible characters
+opt.mouse = "a"                     -- Allow mouse interactions
 opt.number = true                   -- Show line numbers
 opt.relativenumber = false          -- Relative line numbers
 opt.scrolloff = 4                   -- Lines of context
