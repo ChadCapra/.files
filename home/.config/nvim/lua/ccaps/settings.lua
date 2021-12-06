@@ -19,3 +19,5 @@ opt.splitright = true               -- Put new windows right of current
 opt.tabstop = 2                     -- Number of spaces tabs count for
 opt.termguicolors = true            -- True color support
 opt.wrap = false                    -- Disable line wrap
+
+vim.cmd('colorscheme moonfly')

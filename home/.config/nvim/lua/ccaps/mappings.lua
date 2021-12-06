@@ -13,5 +13,8 @@ map('n', '<leader>p', ':bprev<cr>', options)
 map('n', '<leader>w', ':w<cr>', options)
 map('n', '<leader>q', ':q<cr>', options)
 map('n', '<leader>e', ':e %:h<cr>', options)
-map('n', '<leader>v', ':vs %:h<cr>', options)
+map('n', '<leader>s', ':vs %:h<cr>', options)
+
+map('n', '<leader>ve', ':vsplit $MYVIMRC<cr>', options)
+map('n', '<leader>vr', ':source $MYVIMRC<cr>', options)
 
