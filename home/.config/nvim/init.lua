@@ -15,6 +15,7 @@ require('ccaps.mappings')
 require('Comment').setup()
 require('hop').setup()
 require('neoscroll').setup()
+require('nvim-tree').setup()
 
 
 -- Configure Plugins (beyond default)
