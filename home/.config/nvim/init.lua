@@ -1,25 +1,12 @@
--- unload existing requires (to prevent using cached configuration)
+-- Set namespace for all your configuration
+local namespace = 'ccaps'
+
+-- Prevent using cached configuration when you :source $MYVIMRC
 for name,_ in pairs(package.loaded) do
-  if name:match('^ccaps') then
+  if name:match('^' .. namespace) then
     package.loaded[name] = nil
   end
 end
 
--- Install plugins, default settings, and mappings
-require('ccaps.plugins')
-require('ccaps.settings')
-require('ccaps.mappings')
-
-
--- Load Default Configurations
-require('Comment').setup()
-require('hop').setup()
-require('neoscroll').setup()
-require('nvim-tree').setup()
-
-
--- Configure Plugins (beyond default)
-require('ccaps.treesitter')
-require('ccaps.telescope')
--- require('ccaps.lsp')
-
+-- all configuration is done in namespace to prevent naming collisions
+require(namespace)

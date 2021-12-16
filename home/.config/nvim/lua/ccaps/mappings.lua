@@ -1,19 +1,20 @@
--- mappings.lua
-local map = vim.api.nvim_set_keymap
+local ns = (...)
+  
+local map = require(ns .. '.utils').keymap
 
 -- map the leader key
-map('n', '<Space>', '', {})
-vim.g.mapleader = ' '  -- 'vim.g' sets global variables
+map('n', '<Space>', '')
+vim.g.mapleader = ' '
 
+map('n', '<leader><esc>', ':nohlsearch<cr>')
+map('n', '<leader>w', '<C-w>w')
+map('n', '<leader>W', '<C-w>W')
+map('n', '<leader>b', ':bnext<cr>')
+map('n', '<leader>B', ':bprev<cr>')
+map('n', '<leader>s', ':w<cr>')
+map('n', '<leader>q', ':q<cr>')
+map('n', '<leader>t', ':NvimTreeToggle<cr>')
 
-local options = { noremap = true }
-map('n', '<leader><esc>', ':nohlsearch<cr>', options)
-map('n', '<leader>n', ':bnext<cr>', options)
-map('n', '<leader>p', ':bprev<cr>', options)
-map('n', '<leader>w', ':w<cr>', options)
-map('n', '<leader>q', ':q<cr>', options)
-map('n', '<leader>t', ':NvimTreeToggle<cr>', options)
-
-map('n', '<leader>ve', ':vsplit $MYVIMRC<cr>', options)
-map('n', '<leader>vr', ':source $MYVIMRC<cr>', options)
+map('n', '<leader>ve', ':vsplit $MYVIMRC<cr>')
+map('n', '<leader>vr', ':source $MYVIMRC<cr>')
 
