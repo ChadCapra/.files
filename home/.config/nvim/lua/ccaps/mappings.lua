@@ -1,4 +1,4 @@
-local ns = (...)
+local ns = select('1', ...):match(".+%.") or ""
   
 local map = require(ns .. '.utils').keymap
 

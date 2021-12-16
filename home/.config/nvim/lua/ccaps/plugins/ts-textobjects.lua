@@ -32,6 +32,7 @@ local init = function () require('nvim-treesitter.configs').setup {
       },
     },
   }
+}
 end
 
 return { config = init }

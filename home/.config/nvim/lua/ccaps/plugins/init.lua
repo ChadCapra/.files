@@ -27,7 +27,7 @@ for _, plugin in pairs(plugins) do
     plugin_ext = require(ns .. '.' .. plugin.extend)
     plugin = vim.tbl_extend("keep", plugin, plugin_ext)
   end
-  packer.use plugin
+  packer.use(plugin)
 end
 
 

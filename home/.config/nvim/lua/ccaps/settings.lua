@@ -1,4 +1,5 @@
-local opt = vim.opt  -- to set options
+local opt = vim.opt   -- to set options
+local g = vim.g       -- to set globals
 
 -- Use bash because fish shell can slow things down
 opt.shell = "/bin/bash"
@@ -47,5 +48,5 @@ local disabled_built_ins = {
 }
 
 for _, plugin in pairs(disabled_built_ins) do
-   g["loaded_" .. plugin] = 1
+--   g["loaded_" .. plugin] = 1
 end
