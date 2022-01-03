@@ -1,5 +1,4 @@
 local ns = select('1', ...):match(".+%.") or ""
-  
 local map = require(ns .. '.utils').keymap
 
 -- map the leader key
@@ -18,3 +17,10 @@ map('n', '<leader>t', ':NvimTreeToggle<cr>')
 map('n', '<leader>ve', ':vsplit $MYVIMRC<cr>')
 map('n', '<leader>vr', ':source $MYVIMRC<cr>')
 
+
+-- Replace (from visual mode or last search)
+map('v', '<leader>r', '"ry:%s/<C-r>r//gc<left><left><left>')
+map('v', '<leader>R', '"ry:%s/<C-r>R//g<left><left>')
+
+map('n', '<leader>r', '*``:%s///gc<left><left><left>')
+map('n', '<leader>R', '*``:%s///g<left><left>')

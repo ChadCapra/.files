@@ -1,3 +1,16 @@
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
 -- install packer if not exists 
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -17,19 +30,17 @@ packer.reset()
 
 -- Load plugins
 local ns = (...)
-
-print(ns)
-
 local plugins = require(ns .. '.all')
 
 for _, plugin in pairs(plugins) do
   if type(plugin) == "table" and plugin.extend then
     plugin_ext = require(ns .. '.' .. plugin.extend)
     plugin = vim.tbl_extend("keep", plugin, plugin_ext)
+    plugin.extend = nil
   end
+  print(dump(plugin))
   packer.use(plugin)
 end
-
 
 -- Clean/Update plugins
 if packer_bootstrap then

@@ -10,7 +10,7 @@ return {
 
 
   -- Navigating / Moving
-  {'kyazdani42/nvim-tree.lua'},
+  {'kyazdani42/nvim-tree.lua', extend = 'nvim-tree'},
   {'nvim-telescope/telescope.nvim', extend = 'telescope'},
   {'phaazon/hop.nvim', extend = 'telescope'},
 
