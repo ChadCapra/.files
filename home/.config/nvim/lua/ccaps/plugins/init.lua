@@ -1,15 +1,4 @@
-function dump(o)
-   if type(o) == 'table' then
-      local s = '{ '
-      for k,v in pairs(o) do
-         if type(k) ~= 'number' then k = '"'..k..'"' end
-         s = s .. '['..k..'] = ' .. dump(v) .. ','
-      end
-      return s .. '} '
-   else
-      return tostring(o)
-   end
-end
+local pprint = require(ns .. '.utils').pprint
 
 -- install packer if not exists 
 local fn = vim.fn
@@ -29,16 +18,15 @@ packer.reset()
 
 
 -- Load plugins
-local ns = (...)
-local plugins = require(ns .. '.all')
+local plugins = require(ns .. '.plugins.all')
 
 for _, plugin in pairs(plugins) do
   if type(plugin) == "table" and plugin.extend then
-    plugin_ext = require(ns .. '.' .. plugin.extend)
+    plugin_ext = require(ns .. '.plugins.' .. plugin.extend)
     plugin = vim.tbl_extend("keep", plugin, plugin_ext)
     plugin.extend = nil
   end
-  print(dump(plugin))
+  if log_enabled then pprint(plugin) end
   packer.use(plugin)
 end
 

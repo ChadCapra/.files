@@ -1,5 +1,3 @@
-local ns = (...)
-
 -- Install default settings, mappings, commands and plugins
 require(ns .. '.settings')
 

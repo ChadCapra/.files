@@ -1,6 +1,21 @@
 local M = {}
 local DEFAULT_OPTS = { noremap = true, silent = true }
 
+-- Convert table to string for debugging
+local table_to_string 
+table_to_string = function(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. table_to_string(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
 -- Global key map
 -- @param mode
 M.keymap = function(mode_or_table, lhs, rhs, opts)
@@ -35,12 +50,21 @@ M.buf_keymap = function(bufnr, mode, lhs, rhs, opts)
 end
 
 -- Dumb way to set an autocmd group
-function M.set_augroup(group, autocmds)
+M.set_augroup = function(group, autocmds)
   local cmd = vim.api.nvim_command
   cmd('augroup ' .. group)
   cmd('au!')
   for _, autocmd in pairs(autocmds) do cmd(autocmd) end
   cmd('augroup end')
+end
+
+-- Convert table to string for debugging
+M.table_to_string =  table_to_string
+
+-- Pretty Print strings or tables
+M.pprint = function(item)
+  print("hello")
+  print(table_to_string(item))
 end
 
 return M

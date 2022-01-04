@@ -34,6 +34,6 @@ return {
 
   -- Theme / Color / Display
   {'karb94/neoscroll.nvim', extend = 'neoscroll'},
-  {'bluz71/vim-moonfly-colors', extend = 'colorscheme'},
+  {'bluz71/vim-moonfly-colors'},
 
 }
