@@ -1,10 +1,7 @@
--- Place commands here
+local cmds = {
+  "set whichwrap+=<,>,[,],h,l",
+  [[set iskeyword+=-]],
+  'colorscheme moonfly',
+}
 
-
-
-
-
--- Place autocommands here
-
-
-
+require(ns .. '.utils').set_commands(cmds)

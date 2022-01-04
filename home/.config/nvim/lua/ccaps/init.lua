@@ -1,5 +1,7 @@
 -- Install default settings, mappings, commands and plugins
-require(ns .. '.settings')
+require(ns .. '.globals')
+
+require(ns .. '.options')
 
 require(ns .. '.mappings')
 
