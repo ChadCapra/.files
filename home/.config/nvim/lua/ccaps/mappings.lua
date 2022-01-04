@@ -29,8 +29,6 @@ map('n', '<leader>t', ':NvimTreeToggle<cr>')
 
 
 -- Search/Replace (from visual mode or last search)
-map('n', 'h', 'n')
-
 map('v', '<leader>r', '"ry:%s/<C-r>r//gc<left><left><left>')
 map('v', '<leader>R', '"ry:%s/<C-r>R//g<left><left>')
 
