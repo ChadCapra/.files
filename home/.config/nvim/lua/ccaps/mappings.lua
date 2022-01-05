@@ -39,6 +39,28 @@ local mappings = {
   {'n', '<leader>O', 'O<esc>'},
 
 
+  -- Resize with arrows
+  {"n", "<C-Up>", ":resize -2<cr>"},
+  {"n", "<C-Down>", ":resize +2<cr>"},
+  {"n", "<C-Left>", ":vertical resize -2<cr>"},
+  {"n", "<C-Right>", ":vertical resize +2<cr>"},
+
+
+  -- Move text up and down
+  {"n", "<A-n>", ":m .+1<cr>=="},
+  {"n", "<A-l>", ":m .-2<cr>=="},
+  {"i", "<A-n>", "<Esc>:m .+1<cr>==gi"},
+  {"i", "<A-l>", "<Esc>:m .-2<cr>==gi"},
+  {"v", "<A-n>", ":m '>+1<cr>gv=gv"},
+  {"v", "<A-l>", ":m '<-2<cr>gv=gv"},
+
+
+  -- Visual mode helpers
+  {"v", "<", "<gv"},
+  {"v", ">", ">gv"},
+  {"v", "p", '"_dp'},
+
+
   -- Edit/Reload vimrc
   {'n', '<leader>ve', ':vsplit $MYVIMRC<cr>'},
   {'n', '<leader>vr', ':source $MYVIMRC<cr>:nohlsearch<cr>'},
