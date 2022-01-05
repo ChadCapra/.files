@@ -1,18 +1,16 @@
 local mappings = {
-  --  {'n', '<Space>', ''},
+  {'n', '<Space>', ''},
 
-  --
-  -- -- remap navigation for better layouts
-  -- {'n', 'n', 'j'},
-  -- {'n', 'N', '}'},
-  -- {'n', '<C-n>', '<C-d>'},
-  -- {'n', 'l', 'k'},
-  -- {'n', 'L', '{'},
-  -- {'n', '<C-l>', '<C-u>'},
-  --
-  -- {'n', 'j', 'l'},
-  -- {'n', 'k', 'h'},
+  -- remap navigation for better layouts
+  {'', 'n', 'j'},
+  {'', 'N', '}'},
+  {'', '<C-n>', '<C-d>'},
+  {'', 'l', 'k'},
+  {'', 'L', '{'},
+  {'', '<C-l>', '<C-u>'},
 
+  {'', 'j', 'l'},
+  {'', 'k', 'h'},
 
 
   -- File/Buffer/Window navigation
@@ -22,10 +20,12 @@ local mappings = {
   {'n', '<leader>B', ':bprev<cr>'},
   {'n', '<leader>s', ':w<cr>'},
   {'n', '<leader>q', ':q<cr>'},
-  {'n', '<leader>t', ':NvimTreeToggle<cr>'},
 
 
   -- Search/Replace (from visual mode or last search},
+  {'n', 'h', 'n'},  -- use h (highlight) for repeated search
+  {'n', 'H', 'n'},  -- use h (highlight) for repeated search
+
   {'v', '<leader>r', '"ry:%s/<C-r>r//gc<left><left><left>'},
   {'v', '<leader>R', '"ry:%s/<C-r>R//g<left><left>'},
 
@@ -41,7 +41,7 @@ local mappings = {
 
   -- Edit/Reload vimrc
   {'n', '<leader>ve', ':vsplit $MYVIMRC<cr>'},
-  {'n', '<leader>vr', ':source $MYVIMRC<cr>'},
+  {'n', '<leader>vr', ':source $MYVIMRC<cr>:nohlsearch<cr>'},
 }
 
 require(ns .. '.utils').set_mappings(mappings)
