@@ -37,6 +37,7 @@ local mappings = {
   {'n', '<leader><esc>', ':nohlsearch<cr>'},
   {'n', '<leader>o', 'o<esc>'},
   {'n', '<leader>O', 'O<esc>'},
+  {'n', 'U', '<C-r>'},  -- such a better "redo"
 
 
   -- Resize with arrows
