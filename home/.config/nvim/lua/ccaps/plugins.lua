@@ -20,9 +20,8 @@ local plugins = {
 
 
   -- LSP / Autocomplete / Snippets
-  -- {'neovim/nvim-lspconfig'},
-  -- {'williamboman/nvim-lsp-installer'},
-  -- {'hrsh7th/cmp-nvim-lsp'},
+  {'neovim/nvim-lspconfig'},
+  {'williamboman/nvim-lsp-installer'},
   {'hrsh7th/nvim-cmp', extend = 'nvim-cmp'},
 
   

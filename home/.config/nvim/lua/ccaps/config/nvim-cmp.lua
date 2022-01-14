@@ -3,10 +3,14 @@ local M = {}
 M.requires = {
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
-  'hrsh7th/cmp-cmdline'
+  'hrsh7th/cmp-cmdline',
+  'L3MON4D3/LuaSnip',
+  'hrsh7th/cmp-nvim-lsp',
 }
 
 M.config = function ()
+  
+  require("luasnip/loaders/from_vscode").lazy_load()
       
   --   פּ ﯟ   some other good icons
   local kind_icons = {
@@ -62,10 +66,7 @@ M.config = function ()
     },
     sources = cmp.config.sources({
       -- { name = 'nvim_lsp' },
-      -- { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
+      { name = 'luasnip' }, -- For luasnip users.
       { name = 'buffer' },
       { name = 'path' },
     }),
