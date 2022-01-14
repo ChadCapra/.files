@@ -1,10 +1,7 @@
 local plugins = {
 
-  -- plugin manager
+  -- plugin manager & common/shared dependencies
   'wbthomason/packer.nvim',
-
-
-  -- common/shared dependencies
   'nvim-lua/plenary.nvim',
   'kyazdani42/nvim-web-devicons',
 
@@ -25,6 +22,8 @@ local plugins = {
   -- LSP / Autocomplete / Snippets
   -- {'neovim/nvim-lspconfig'},
   -- {'williamboman/nvim-lsp-installer'},
+  -- {'hrsh7th/cmp-nvim-lsp'},
+  {'hrsh7th/nvim-cmp', extend = 'nvim-cmp'},
 
   
   -- Editing
@@ -35,6 +34,9 @@ local plugins = {
   -- Theme / Color / Display
   {'karb94/neoscroll.nvim', extend = 'neoscroll'},
   {'bluz71/vim-moonfly-colors'},
+  -- {'catppuccin/nvim',	as = 'catppuccin'},
+  -- {'folke/tokyonight.nvim'},
+  -- {'EdenEast/nightfox.nvim'},
 
 }
 
