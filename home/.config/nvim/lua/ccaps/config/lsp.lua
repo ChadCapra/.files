@@ -2,7 +2,7 @@ local M = {}
 
 M.config = function ()
 
-  local servers = { 'elixirls', 'sumneko_lua', 'tsserver' }
+  local servers = { 'elixirls', 'sumneko_lua', 'svelte' }
   local nvim_lsp = require('lspconfig')
 
   local maps = { 
