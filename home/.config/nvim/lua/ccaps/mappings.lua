@@ -51,5 +51,5 @@ local mappings = {
   {'n', '<leader>vr', ':source $MYVIMRC<cr>:nohlsearch<cr>'},
 }
 
-require(ns .. '.utils').set_mappings(mappings)
+require(NS .. '.utils').set_mappings(mappings)
 

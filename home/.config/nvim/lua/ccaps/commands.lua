@@ -4,7 +4,7 @@ local cmds = {
   'colorscheme moonfly',
 }
 
-require(ns .. '.utils').set_commands(cmds)
+require(NS .. '.utils').set_commands(cmds)
 
 
 -- Highlight on yank

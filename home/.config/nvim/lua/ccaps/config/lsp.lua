@@ -5,7 +5,7 @@ M.config = function ()
   local servers = { 'elixirls', 'sumneko_lua', 'svelte' }
   local nvim_lsp = require('lspconfig')
 
-  local maps = { 
+  local maps = {
     {'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>'},
     {'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>'},
     {'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>'},
@@ -25,8 +25,8 @@ M.config = function ()
     {'n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>'},
   }
 
-  local on_attach = function (client, bufnr)
-    require(ns .. '.utils').set_buffer_mappings(bufnr, maps)
+  local on_attach = function (_, bufnr)
+    require(NS .. '.utils').set_buffer_mappings(bufnr, maps)
   end
 
     -- Add additional capabilities supported by nvim-cmp
@@ -39,7 +39,7 @@ M.config = function ()
   -- Loop through servers and load additional config from file (when available)
   -- set 'config' to empty table if no additional config specified
   for _, server in ipairs(servers) do
-    local is_ok, config = pcall(require, ns .. '.lsp_settings.' .. server)
+    local is_ok, config = pcall(require, NS .. '.lsp_settings.' .. server)
     if not is_ok then config = {} end
 
     config.on_attach = on_attach

@@ -38,4 +38,4 @@ local options = {
 
 vim.opt.shortmess:append "c"
 
-require(ns .. '.utils').set_options(options)
+require(NS .. '.utils').set_options(options)

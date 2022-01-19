@@ -22,13 +22,14 @@ local plugins = {
   -- Autocomplete / LSP
   {'hrsh7th/nvim-cmp', extend = 'nvim-cmp'},
   {'neovim/nvim-lspconfig', extend = 'lsp'},
+  {'folke/trouble.nvim'},
 
 
   -- Snippets
   {'L3MON4D3/LuaSnip'},
   {'rafamadriz/friendly-snippets'},
 
-  
+
   -- Editing
   {'numToStr/Comment.nvim', extend = 'comment'},
   -- {'tpope/vim-surround'}
@@ -44,7 +45,8 @@ local plugins = {
 }
 
 
--- install packer if not exists 
+-- install packer if not exists
+local packer_bootstrap
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -62,15 +64,15 @@ packer.reset()
 
 
 -- Load plugins
-local pprint = require(ns .. '.utils').pprint
+local pprint = require(NS .. '.utils').pprint
 
 for _, plugin in pairs(plugins) do
   if type(plugin) == "table" and plugin.extend then
-    plugin_ext = require(ns .. '.config.' .. plugin.extend)
+    local plugin_ext = require(NS .. '.config.' .. plugin.extend)
     plugin = vim.tbl_extend("keep", plugin, plugin_ext)
     plugin.extend = nil
   end
-  if log_enabled then pprint(plugin) end
+  if LOG_ENABLED then pprint(plugin) end
   packer.use(plugin)
 end
 

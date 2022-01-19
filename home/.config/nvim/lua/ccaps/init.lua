@@ -1,10 +1,10 @@
 -- Install default settings, mappings, commands and plugins
-require(ns .. '.globals')
+require(NS .. '.globals')
 
-require(ns .. '.options')
+require(NS .. '.options')
 
-require(ns .. '.mappings')
+require(NS .. '.mappings')
 
-require(ns .. '.commands')
+require(NS .. '.commands')
 
-require(ns .. '.plugins')
+require(NS .. '.plugins')

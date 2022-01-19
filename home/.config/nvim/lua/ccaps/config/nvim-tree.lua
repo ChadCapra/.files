@@ -1,5 +1,5 @@
-require(ns .. '.utils').set_mapping({'n', '<leader>t', ':NvimTreeToggle<cr>'})
-  
+require(NS .. '.utils').set_mapping({'n', '<leader>t', ':NvimTreeToggle<cr>'})
+
 local init = function ()
   local tree_cb = require "nvim-tree.config".nvim_tree_callback
 
