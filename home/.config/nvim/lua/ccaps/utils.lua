@@ -76,11 +76,11 @@ local set_buffer_mapping = function(bufnr, mode, lhs, rhs, opts)
 end
 
 M.set_buffer_mapping = set_buffer_mapping
-M.set_buffer_mappings = function(mappings)
+M.set_buffer_mappings = function(bufnr, mappings)
   if type(mappings[1]) == 'table' then
-    for _, mapping in pairs(mappings) do set_buffer_mapping(mapping) end
+    for _, mapping in pairs(mappings) do set_buffer_mapping(bufnr, mapping) end
   else
-    set_buffer_mapping(mappings)
+    set_buffer_mapping(bufnr, mappings)
   end
 end
 

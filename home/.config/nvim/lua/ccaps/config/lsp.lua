@@ -1,15 +1,8 @@
 local M = {}
 
-M.requires = { 'williamboman/nvim-lsp-installer' }
-
 M.config = function ()
 
-  -- install servers
   local servers = { 'elixirls', 'sumneko_lua', 'tsserver' }
-  require(ns .. '.config.lsp.installer').install(servers)
-
-
-  -- setup servers
   local nvim_lsp = require('lspconfig')
 
   local maps = { 
@@ -33,7 +26,7 @@ M.config = function ()
   }
 
   local on_attach = function (client, bufnr)
-    require(ns .. '.utils').set_buffer_mapping(bufnr, maps)
+    require(ns .. '.utils').set_buffer_mappings(bufnr, maps)
   end
 
     -- Add additional capabilities supported by nvim-cmp
@@ -46,7 +39,7 @@ M.config = function ()
   -- Loop through servers and load additional config from file (when available)
   -- set 'config' to empty table if no additional config specified
   for _, server in ipairs(servers) do
-    local ok, config = pcall(require, ns .. '.config.lsp.' .. server)
+    local ok, config = pcall(require, ns .. '.lsp_settings.' .. server)
     if not ok then config = {} end
 
     config.on_attach = on_attach

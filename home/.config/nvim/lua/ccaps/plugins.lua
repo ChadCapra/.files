@@ -13,8 +13,8 @@ local plugins = {
 
 
   -- AST / Highlighting
-  {'nvim-treesitter/nvim-treesitter', extend = 'treesitter'},
-  {'nvim-treesitter/nvim-treesitter-textobjects', extend = 'ts-textobjects'},
+  -- {'nvim-treesitter/nvim-treesitter', extend = 'treesitter'},
+  -- {'nvim-treesitter/nvim-treesitter-textobjects', extend = 'ts-textobjects'},
   -- {'nvim-treesitter/playground', extend = 'ts-playground'},
   {'elixir-editors/vim-elixir'},
 
