@@ -1,4 +1,4 @@
-local maps = { 
+local maps = {
 
   --Find Files (ff = Find File / fg = Find git (tracked files) / fr = Find Recent / fe = File Explorer)
   {'n', '<leader>ff', [[<cmd>lua require('telescope.builtin').find_files()<CR>]]},

@@ -7,7 +7,7 @@ local mappings = {
   {'n', '<leader>b', ':bnext<cr>'},
   {'n', '<leader>B', ':bprev<cr>'},
   {'n', '<leader>s', ':w<cr>'},
-  {'n', '<leader>q', ':q<cr>'},
+  {'n', '<leader>x', ':q<cr>'},
 
 
   -- Search/Replace (from visual mode or last search},

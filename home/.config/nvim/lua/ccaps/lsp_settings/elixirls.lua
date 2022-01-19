@@ -1,4 +1,4 @@
-local path_to_elixirls = vim.fn.expand("~/.local/share/nvim/lspinstall/elixir/elixir-ls/language_server.sh")
+local path_to_elixirls = vim.fn.expand("/usr/lib/elixir-ls/language_server.sh")
 
 local config = {
   cmd = {path_to_elixirls},
