@@ -39,12 +39,12 @@ M.config = function ()
   -- Loop through servers and load additional config from file (when available)
   -- set 'config' to empty table if no additional config specified
   for _, server in ipairs(servers) do
-    local ok, config = pcall(require, ns .. '.lsp_settings.' .. server)
-    if not ok then config = {} end
+    local is_ok, config = pcall(require, ns .. '.lsp_settings.' .. server)
+    if not is_ok then config = {} end
 
     config.on_attach = on_attach
     config.capabilities = capabilities
-    
+
     nvim_lsp[server].setup(config)
   end
 
