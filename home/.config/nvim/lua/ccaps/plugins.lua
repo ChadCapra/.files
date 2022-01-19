@@ -19,10 +19,10 @@ local plugins = {
   {'elixir-editors/vim-elixir'},
 
 
-  -- LSP / Autocomplete
-  {'neovim/nvim-lspconfig'},
-  {'williamboman/nvim-lsp-installer'},
+  -- Autocomplete / LSP
   {'hrsh7th/nvim-cmp', extend = 'nvim-cmp'},
+  {'neovim/nvim-lspconfig', extend = 'lsp'},
+
 
   -- Snippets
   {'L3MON4D3/LuaSnip'},

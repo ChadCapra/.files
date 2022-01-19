@@ -64,8 +64,8 @@ end
 
 -- Buffer key mappings
 local set_buffer_mapping = function(bufnr, mode, lhs, rhs, opts)
-  if type(bufnr) == 'table' then
-    bufnr, mode, lhs, rhs, opts = unpack(bufnr)
+  if type(mode) == 'table' then
+    mode, lhs, rhs, opts = unpack(mode)
   end
 
   if opts ~= nil and not vim.tbl_isempty(opts) then
