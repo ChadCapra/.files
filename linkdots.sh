@@ -1,9 +1,8 @@
 #!/bin/bash
 
+NEOVIM_NAMESPACE="ccaps"
 DOTFILEDIR="$HOME/dotfiles/home"
 BACKUPDIR=$HOME/dotfiles.bak/"$(date +"%Y%m%d_%H%M%S")"
-
-mkdir -p $BACKUPDIR
 
 backup_existing() {
   existing_path=$HOME/$1
@@ -23,9 +22,12 @@ symlink_dotfile() {
   ln -s $git_path $link_path
 }
 
-# iterate through each dotfile and symlink from relative location
+# remove existing neovim namespace files and create backup folder
+rm -rf $HOME/.config/nvim/lua/$NEOVIM_NAMESPACE
+mkdir -p $BACKUPDIR
 cd $DOTFILEDIR
 
+# iterate through each dotfile and symlink from relative location
 find . -type f -print0 | while read -d $'\0' file; do
   relfile=$(echo $file | cut -c 3-)
   echo "linking ... $relfile"
