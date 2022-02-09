@@ -32,7 +32,7 @@ local plugins = {
 
   -- Editing
   {'numToStr/Comment.nvim', extend = 'comment'},
-  -- {'tpope/vim-surround'}
+  {'tpope/vim-surround'},
 
 
   -- Theme / Color / Display
