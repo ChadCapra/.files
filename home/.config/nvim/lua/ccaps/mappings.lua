@@ -52,7 +52,7 @@ local mappings = {
 
 
   -- Renumber lists
-  {'v', '<leader>rn', [[:s/\d\+/0/g<cr>]]},
+  {'v', '<leader>rn', [[:s/\d\+/0/g<cr>:nohlsearch<cr>gv]]},
 
 }
 
