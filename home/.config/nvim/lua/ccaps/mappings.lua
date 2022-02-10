@@ -49,6 +49,11 @@ local mappings = {
   -- Edit/Reload vimrc
   {'n', '<leader>ve', ':vsplit $MYVIMRC<cr>'},
   {'n', '<leader>vr', ':source $MYVIMRC<cr>:nohlsearch<cr>'},
+
+
+  -- Renumber lists
+  {'v', '<leader>rn', [[:s/\d\+/0/g<cr>]]},
+
 }
 
 require(NS .. '.utils').set_mappings(mappings)
