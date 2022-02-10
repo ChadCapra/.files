@@ -9,7 +9,7 @@ local plugins = {
   -- Navigating / Moving
   {'kyazdani42/nvim-tree.lua', extend = 'nvim-tree'},
   {'nvim-telescope/telescope.nvim', extend = 'telescope'},
-  {'ggandor/lightspeed.nvim', extend = 'lightspeed'},
+  -- {'ggandor/lightspeed.nvim', extend = 'lightspeed'},
 
 
   -- AST / Highlighting
