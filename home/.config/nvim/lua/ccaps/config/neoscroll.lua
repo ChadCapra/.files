@@ -18,8 +18,8 @@ M.config = function ()
   t['zt']    = {'zt', {'250'}}
   t['zz']    = {'zz', {'250'}}
   t['zb']    = {'zb', {'250'}}
-  t['gg']    = {'scroll', {'-2*vim.api.nvim_buf_line_count(0)', 'true', '1', '5', nil}}
-  t['G']     = {'scroll', {'2*vim.api.nvim_buf_line_count(0)', 'true', '1', '5', nil}}
+  -- t['gg']    = {'scroll', {'-2*vim.api.nvim_buf_line_count(0)', 'true', '1', '5', nil}}
+  -- t['G']     = {'scroll', {'2*vim.api.nvim_buf_line_count(0)', 'true', '1', '5', nil}}
 
   require('neoscroll.config').set_mappings(t)
 end
