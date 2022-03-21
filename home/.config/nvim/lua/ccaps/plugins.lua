@@ -5,6 +5,8 @@ local plugins = {
   'nvim-lua/plenary.nvim',
   'kyazdani42/nvim-web-devicons',
 
+  -- mini.nvim (a collection of useful plugins)
+  {'echasnovski/mini.nvim', extend = 'mini-nvim'},
 
   -- Navigating / Moving
   {'kyazdani42/nvim-tree.lua', extend = 'nvim-tree'},
@@ -22,7 +24,7 @@ local plugins = {
   -- Autocomplete / LSP
   {'hrsh7th/nvim-cmp', extend = 'nvim-cmp'},
   {'neovim/nvim-lspconfig', extend = 'lsp'},
-  {'folke/trouble.nvim'},
+  -- {'folke/trouble.nvim'},
 
 
   -- Snippets
@@ -31,8 +33,8 @@ local plugins = {
 
 
   -- Editing
-  {'numToStr/Comment.nvim', extend = 'comment'},
-  {'tpope/vim-surround'},
+  -- {'numToStr/Comment.nvim', extend = 'comment'},
+  -- {'tpope/vim-surround'},
 
 
   -- Theme / Color / Display
