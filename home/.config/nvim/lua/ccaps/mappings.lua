@@ -1,11 +1,11 @@
 local mappings = {
   {'n', '<Space>', ''},
 
-  -- File/Buffer/Window navigation
-  {'n', '<leader>w', '<C-w>w'},
-  {'n', '<leader>W', '<C-w>W'},
-  {'n', '<leader>b', ':bnext<cr>'},
-  {'n', '<leader>B', ':bprev<cr>'},
+-- File/Buffer/Window navigation
+  {'n', '<leader>N', '<C-w>w'},
+  {'n', '<leader>P', '<C-w>W'},
+  {'n', '<leader>n', ':bnext<cr>'},
+  {'n', '<leader>p', ':bprev<cr>'},
   {'n', '<leader>s', ':w<cr>'},
   {'n', '<leader>x', ':q<cr>'},
 

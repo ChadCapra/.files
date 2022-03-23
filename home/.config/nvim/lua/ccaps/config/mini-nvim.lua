@@ -27,6 +27,12 @@ M.config = function ()
   require('mini.tabline').setup()
   require('mini.trailspace').setup()
 
+  local maps = {
+    {'n', '<leader>bd', [[<cmd>lua MiniBufremove.delete()<CR>]]},
+    {'n', '<leader>bw', [[<cmd>lua MiniBufremove.wipeout()<CR>]]},
+  }
+
+  require(NS .. '.utils').set_mappings(maps)
 end
 
 return M
