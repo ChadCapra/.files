@@ -4,20 +4,23 @@ local plugins = {
   'wbthomason/packer.nvim',
   'nvim-lua/plenary.nvim',
   'kyazdani42/nvim-web-devicons',
+  'MunifTanjim/nui.nvim',
 
   -- mini.nvim (a collection of useful plugins)
   {'echasnovski/mini.nvim', extend = 'mini-nvim'},
+  {'akinsho/toggleterm.nvim', extend = 'toggleterm'},
 
   -- Navigating / Moving
-  {'kyazdani42/nvim-tree.lua', extend = 'nvim-tree'},
+  -- {'kyazdani42/nvim-tree.lua', extend = 'nvim-tree'},
+  {'nvim-neo-tree/neo-tree.nvim', extend = 'neo-tree'},
   {'nvim-telescope/telescope.nvim', extend = 'telescope'},
   -- {'ggandor/lightspeed.nvim', extend = 'lightspeed'},
 
 
   -- AST / Highlighting
   {'nvim-treesitter/nvim-treesitter', extend = 'treesitter'},
-  {'nvim-treesitter/nvim-treesitter-textobjects', extend = 'ts-textobjects'},
-  -- {'nvim-treesitter/playground', extend = 'ts-playground'},
+  {'nvim-treesitter/nvim-treesitter-textobjects', extend = 'treesitter-to'},
+  -- {'nvim-treesitter/playground', extend = 'treesitter-play'},
   {'elixir-editors/vim-elixir'},
 
 
@@ -59,8 +62,8 @@ end
 -- initialize and configure packer
 local packer = require("packer")
 packer.init {
-    enable = true, -- enable profiling via :PackerCompile profile=true
-    threshold = 0 -- the amount in ms that a plugins load time must be over for it to be included in the profile
+  enable = true, -- enable profiling via :PackerCompile profile=true
+  threshold = 0 -- the amount in ms that a plugins load time must be over for it to be included in the profile
 }
 packer.reset()
 

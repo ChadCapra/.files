@@ -16,7 +16,7 @@
 
 set -g default-command /usr/bin/fish
 set -g default-shell /usr/bin/fish
-
+unbind C-a
 
 # -- windows & pane creation ---------------------------------------------------
 
