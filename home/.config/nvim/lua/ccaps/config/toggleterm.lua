@@ -1,16 +1,3 @@
-local Terminal  = require('toggleterm.terminal').Terminal
-local lazygit = Terminal:new({
-  cmd = "lazygit",
-  hidden = true,
-  direction = "float",
-  float_opts = {
-    border = "double",
-  }
-})
-
-function _LAZYGIT_TOGGLE()
-  lazygit:toggle()
-end
 
 local maps = {
 
@@ -29,6 +16,20 @@ M.config  = function ()
     open_mapping = [[<c-\>]],
     shell = 'fish',
   }
+
+local Terminal  = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({
+  cmd = "lazygit",
+  hidden = true,
+  direction = "float",
+  float_opts = {
+    border = "double",
+  }
+})
+
+function _LAZYGIT_TOGGLE()
+  lazygit:toggle()
+end
 
 end
 
