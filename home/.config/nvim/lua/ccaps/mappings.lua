@@ -27,6 +27,7 @@ local mappings = {
   {'n', '<leader>o', 'o<esc>'},
   {'n', '<leader>O', 'O<esc>'},
   {'n', 'U', '<C-r>'},  -- such a better "redo"
+  {'n', '<leader>T', '<C-w>T'}, -- Open buffer in new tab
 
 
   -- Resize with arrows
