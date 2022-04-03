@@ -4,10 +4,14 @@ local mappings = {
 -- File/Buffer/Window navigation
   {'n', '<leader>w', '<C-w>w'},
   {'n', '<leader>W', '<C-w>W'},
-  {'n', '<leader>n', ':bnext<cr>'},
-  {'n', '<leader>p', ':bprev<cr>'},
+  {'n', '<leader>b', ':bnext<cr>'},
+  {'n', '<leader>B', ':bprev<cr>'},
   {'n', '<leader>s', ':w<cr>'},
   {'n', '<leader>x', ':q<cr>'},
+
+-- Quick fix list navigation
+  {'n', '<leader>j', ':cn<cr>'},
+  {'n', '<leader>k', ':cp<cr>'},
 
 
   -- Search/Replace (from visual mode or last search},
