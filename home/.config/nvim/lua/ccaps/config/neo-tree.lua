@@ -56,7 +56,7 @@ local config = function ()
     },
     window = {
       position = "left",
-      width = 40,
+      width = 35,
       mappings = {
         ["<space>"] = "toggle_node",
         -- ["<2-LeftMouse>"] = "open",
