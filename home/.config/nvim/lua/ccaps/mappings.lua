@@ -26,29 +26,41 @@ local mappings = {
   {'n', '<leader><esc>', ':nohlsearch<cr>'},
   {'n', '<leader>o', 'o<esc>'},
   {'n', '<leader>O', 'O<esc>'},
-  {'n', 'U', '<C-r>'},  -- such a better "redo"
+  {'n', 'U', '<C-r>'},  -- such a better 'redo'
   {'n', '<leader>T', '<C-w>T'}, -- Open buffer in new tab
 
 
+  -- Navigate with arrows
+  {'n', '<S-Up>', '{'},
+  {'n', '<S-Down>', '}'},
+  {'n', '<S-Left>', 'b'},
+  {'n', '<S-Right>', 'w'},
+
+  -- Navigate with arrows
+  {'n', '<C-Up>', ':bnext<cr>'},
+  {'n', '<C-Down>', ':bprev<cr>'},
+  {'n', '<C-Left>', '<C-w>w'},
+  {'n', '<C-Right>', '<C-w>W'},
+
   -- Resize with arrows
-  {"n", "<C-Up>", ":resize -2<cr>"},
-  {"n", "<C-Down>", ":resize +2<cr>"},
-  {"n", "<C-Left>", ":vertical resize -2<cr>"},
-  {"n", "<C-Right>", ":vertical resize +2<cr>"},
+  {'n', '<A-Up>', ':resize -2<cr>'},
+  {'n', '<A-Down>', ':resize +2<cr>'},
+  {'n', '<A-Left>', ':vertical resize -2<cr>'},
+  {'n', '<A-Right>', ':vertical resize +2<cr>'},
 
 
   -- Move text up and down
-  {"n", "<A-j>", ":m .+1<cr>=="},
-  {"n", "<A-k>", ":m .-2<cr>=="},
-  {"i", "<A-j>", "<Esc>:m .+1<cr>==gi"},
-  {"i", "<A-k>", "<Esc>:m .-2<cr>==gi"},
-  {"v", "<A-j>", ":m '>+1<cr>gv=gv"},
-  {"v", "<A-k>", ":m '<-2<cr>gv=gv"},
+  {'n', '<A-j>', ':m .+1<cr>=='},
+  {'n', '<A-k>', ':m .-2<cr>=='},
+  {'i', '<A-j>', '<Esc>:m .+1<cr>==gi'},
+  {'i', '<A-k>', '<Esc>:m .-2<cr>==gi'},
+  {'v', '<A-j>', ':m ">+1<cr>gv=gv'},
+  {'v', '<A-k>', ':m "<-2<cr>gv=gv'},
 
 
   -- Visual mode helpers
-  {"v", "<", "<gv"},
-  {"v", ">", ">gv"},
+  {'v', '<', '<gv'},
+  {'v', '>', '>gv'},
 
 
   -- Edit/Reload vimrc
