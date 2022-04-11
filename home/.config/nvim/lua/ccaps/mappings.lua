@@ -28,6 +28,7 @@ local mappings = {
   {'n', '<leader>O', 'O<esc>'},
   {'n', 'U', '<C-r>'},  -- such a better 'redo'
   {'n', '<leader>T', '<C-w>T'}, -- Open buffer in new tab
+  {'n', '<leader>bo', [[:%bd|e#|bd#<cr>|'"]]}, -- Close all other buffers
 
 
   -- Navigate with arrows
