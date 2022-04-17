@@ -1,7 +1,7 @@
 local cmds = {
   "set whichwrap+=<,>,[,],h,l",
   [[set iskeyword+=-]],
-  'colorscheme moonfly',
+  'silent! colorscheme moonfly',
 }
 
 require(NS .. '.utils').set_commands(cmds)
