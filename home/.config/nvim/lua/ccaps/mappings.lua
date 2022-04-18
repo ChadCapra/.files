@@ -40,8 +40,8 @@ local mappings = {
   -- Navigate with arrows
   {'n', '<C-Up>', ':bnext<cr>'},
   {'n', '<C-Down>', ':bprev<cr>'},
-  {'n', '<C-Left>', '<C-w>w'},
-  {'n', '<C-Right>', '<C-w>W'},
+  {'n', '<C-Left>', '<C-w>W'},
+  {'n', '<C-Right>', '<C-w>w'},
 
   -- Resize with arrows
   {'n', '<A-Up>', ':resize -2<cr>'},
