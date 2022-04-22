@@ -15,6 +15,11 @@ local mappings = {
 
 
   -- Search/Replace (from visual mode or last search},
+  {'n', '<leader>p', [["0p]]},
+  {'n', '<leader>P', [["0P]]},
+  {'x', '<leader>p', [["0p]]},
+  {'x', '<leader>P', [["0P]]},
+
   {'v', '<leader>r', '"ry:%s/<C-r>r//gc<left><left><left>'},
   {'v', '<leader>R', '"ry:%s/<C-r>R//g<left><left>'},
 
