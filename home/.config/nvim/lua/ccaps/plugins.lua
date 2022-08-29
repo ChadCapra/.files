@@ -14,6 +14,7 @@ local plugins = {
   -- {'kyazdani42/nvim-tree.lua', extend = 'nvim-tree'},
   {'nvim-neo-tree/neo-tree.nvim', extend = 'neo-tree'},
   {'nvim-telescope/telescope.nvim', extend = 'telescope'},
+  {'ggandor/leap.nvim', extend = 'leap'},
   -- {'ggandor/lightspeed.nvim', extend = 'lightspeed'},
 
 
