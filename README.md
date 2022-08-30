@@ -360,3 +360,9 @@ Quit and restart nvim
 :q
 nvim .
 ```
+
+If using wayland (and gnome), we need to install pipewire and xdg-desktop-portal (choose gnome/gtp extra from prompt)
+```
+yay -S pipewire
+yay -S xdg-desktop-portal
+```
