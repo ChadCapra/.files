@@ -23,11 +23,13 @@ local plugins = {
   {'nvim-treesitter/nvim-treesitter-textobjects', extend = 'treesitter-to'},
   -- {'nvim-treesitter/playground', extend = 'treesitter-play'},
   {'elixir-editors/vim-elixir'},
+  {'pantharshit00/vim-prisma'},
 
 
   -- Autocomplete / LSP
   {'hrsh7th/nvim-cmp', extend = 'nvim-cmp'},
   {'neovim/nvim-lspconfig', extend = 'lsp'},
+  {'williamboman/nvim-lsp-installer', extend = 'lsp-installer'},
   -- {'folke/trouble.nvim'},
 
 

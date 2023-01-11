@@ -6,8 +6,8 @@ EMAIL="chadcapra@gmail.com"
 DOTFILES_REPO="git@github.com:ChadCapra/dotfiles.git"
 DOTFILES_DIR=$HOME/dotfiles
 
-SSH_KEY_TYPE="ed25519" 
-SSH_KEY_PARAMS="-o -a 256" 
+SSH_KEY_TYPE="ed25519"
+SSH_KEY_PARAMS="-o -a 256"
 SSH_KEY_PATH="$HOME/.ssh/id_$SSH_KEY_TYPE"
 
 PKGS1="git base-devel fish starship tree tldr unzip wget"
