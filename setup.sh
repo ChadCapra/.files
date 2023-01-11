@@ -58,6 +58,18 @@ echo ""
 
 yay -S $YPKGS
 
+
+echo ""
+echo "#########################################################################"
+echo "### Installing packages not available via pacman/yay ###"
+echo "#########################################################################"
+echo ""
+
+# Install protoc
+curl -LO https://github.com/protocolbuffers/protobuf/releases/download/v21.12/protoc-21.12-linux-x86_64.zip
+unzip protoc-21.12-linux-x86_64.zip -d $HOME/.local
+
+
 # Create ssh key (if non-exists)...
 echo ""
 echo ""
