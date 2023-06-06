@@ -22,7 +22,7 @@ exit
 
 Create arch container (by using image from linuxcontainers.org)
 ```
-vmc container termina arch https://us.images.linuxcontainers.org archlinux/current
+vmc container termina arch https://us.lxd.images.canonical.com/ archlinux/current
 ```
 *The following error will be shown after completion:*
 ```
