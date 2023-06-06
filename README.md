@@ -26,8 +26,7 @@ vmc container termina arch https://us.lxd.images.canonical.com/ archlinux/curren
 ```
 *The following error will be shown after completion:*
 ```
-Error: operation `container_start` failed: timeout while waiting for signal
-[ERROR:src/main.rs:181] ERROR: command failed
+ERROR vsh: [vsh.cc(171)] Failed to launch vshd for termina:arch: requested container does not exist: arch
 ```
 
 **Confirm lxc "arch" container is running**
