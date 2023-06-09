@@ -14,3 +14,12 @@ vim.cmd [[
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
   augroup end
 ]]
+
+-- Remove trailing whitespace
+vim.cmd [[
+  augroup RemoveTrailingWhitespace
+    autocmd!
+    autocmd BufWritePre * :%s/\s\+$//e
+  augroup end
+]]
+

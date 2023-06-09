@@ -1,6 +1,9 @@
 local mappings = {
   {'n', '<Space>', ''},
 
+  -- Whole Buffer
+  {'n', '<leader>va', 'ggVG'},
+
 -- File/Buffer/Window navigation
   {'n', '<leader>w', '<C-w>w'},
   {'n', '<leader>W', '<C-w>W'},
@@ -68,7 +71,6 @@ local mappings = {
   -- Visual mode helpers
   {'v', '<', '<gv'},
   {'v', '>', '>gv'},
-
 
   -- Edit/Reload vimrc
   {'n', '<leader>ve', ':vsplit $MYVIMRC<cr>'},
