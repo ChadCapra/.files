@@ -1,7 +1,7 @@
 local maps = {
 
   --File Explorer
-  {'n', '<leader>t', [[<cmd>NeoTreeFocusToggle<CR>]]},
+  {'n', '<leader>t', [[<cmd>Neotree<CR>]]},
 }
 
 require(NS .. '.utils').set_mappings(maps)
